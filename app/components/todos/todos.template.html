@@ -1,0 +1,9 @@
+<section class="todoapp">
+    <todo-header (todo-added)="add($event)"></todo-header>
+    <section class="main" *ngIf="getTodos().length">
+        <ul class="todo-list">
+            <todo-item *ngFor="let todo of getTodos()" [todo]="todo" (removed)="remove(todo)" (modified)="update()"></todo-item>
+        </ul>
+    </section>
+    <todo-footer [filter]="filter" [count]="getTodoCount()" (filter-changed)="setFilter($event)"></todo-footer>
+</section>

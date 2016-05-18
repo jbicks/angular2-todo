@@ -1,4 +1,5 @@
 import {bootstrap}    from '@angular/platform-browser-dynamic';
-import {TodoComponent} from './todo.component';
+import {TodosComponent} from './components/todos/todos.component';
+import {TodoService} from './services/todo.service';
 
-bootstrap(TodoComponent);
+bootstrap(TodosComponent, [TodoService]);
