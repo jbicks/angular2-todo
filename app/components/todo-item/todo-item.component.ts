@@ -21,10 +21,10 @@ export class TodoItemComponent {
     @Input()
     todo:TodoModel;
 
-    @Output()
+    @Output('modified')
     onModified = new EventEmitter();
 
-    @Output()
+    @Output('removed')
     onRemoved = new EventEmitter();
 
     isBeingEdited:boolean;
